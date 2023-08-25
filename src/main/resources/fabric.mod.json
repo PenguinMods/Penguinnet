@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "penguinnet",
+	"version": "${version}",
+	"name": "Penguinnet",
+	"description": "Networked Penguins are Happy Penguins!",
+	"authors": [
+		"BlockyPenguin"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/penguinnet",
+		"sources": "https://github.com/PenguinMods/penguinnet"
+	},
+	"license": "MIT",
+	"icon": "assets/penguinnet/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"com.blockypenguin.penguinnet.client.ClientLoad"
+		],
+		"main": [
+			"com.blockypenguin.penguinnet.common.CommonLoad"
+		],
+		"server": [
+			"com.blockypenguin.penguinnet.server.ServerLoad"
+		],
+		"fabric-datagen": [
+			"com.blockypenguin.penguinnet.datagen.DatagenLoad"
+		]
+	},
+	"mixins": [
+		"penguinnet.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
